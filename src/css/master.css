@@ -1,0 +1,202 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.k-frame{
+  max-width: 204px;
+  background: #424242;
+}
+
+#kalculator{
+  display: grid;
+  grid-template-columns: repeat(4, 48px);
+  grid-template-rows: repeat(8, 48px);
+  grid-gap: 4px;
+}
+
+#k-screen{
+  background: #ffffff;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  font-size: 32px;
+  grid-column-start: 1;
+  width: 204px;
+}
+
+.k-nav-button{
+  background: #424242;
+  border: 0;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  padding: 16px;
+  width: 48px;
+}
+
+.k-nav-button.active{
+  background: #636363;
+}
+
+#k-button-home{
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+#k-button-measure{
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+#k-button-finances{
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
+
+#k-button-programming{
+  grid-column-start: 4;
+  grid-row-start: 1;
+}
+
+#k-button-home:hover,
+#k-button-measure:hover,
+#k-button-finances:hover,
+#k-button-programming:hover{
+  background: #636363;
+}
+
+.k-keyboard-button{
+  border: 0;
+  border-radius: 50%;
+  font-size: 16px;
+  outline: none;
+  padding: 16px;
+  width: 48px;
+}
+
+#k-button-1{
+  grid-column-start: 1;
+  grid-row-start: 7;
+}
+
+#k-button-2{
+  grid-column-start: 2;
+  grid-row-start: 7;
+}
+
+#k-button-3{
+  grid-column-start: 3;
+  grid-row-start: 7;
+}
+
+#k-button-4{
+  grid-column-start: 1;
+  grid-row-start: 6;
+}
+
+#k-button-5{
+  grid-column-start: 2;
+  grid-row-start: 6;
+}
+
+#k-button-6{
+  grid-column-start: 3;
+  grid-row-start: 6;
+}
+
+#k-button-7{
+  grid-column-start: 1;
+  grid-row-start: 5;
+}
+
+#k-button-8{
+  grid-column-start: 2;
+  grid-row-start: 5;
+}
+
+#k-button-9{
+  grid-column-start: 3;
+  grid-row-start: 5;
+}
+
+#k-button-plus{
+  grid-column-start: 4;
+  grid-row-start: 5;
+}
+
+#k-button-0{
+  grid-column-start: 2;
+  grid-row-start: 8;
+}
+
+#k-button-h{
+  background: #FF3D00;
+  color: #fff;
+  grid-column-start: 1;
+  grid-row-start: 8;
+}
+
+#k-button-point{
+  grid-column-start: 3;
+  grid-row-start: 8;
+}
+
+#k-button-equal{
+  background: #FF3D00;
+  color: #fff;
+  grid-column-start: 4;
+  grid-row-start: 8;
+}
+
+#k-button-equal:hover, #k-button-h:hover{
+  background: #DD2C00;
+}
+
+#k-button-minus{
+  color: #FF3D00;
+  font-weight: bold;
+  grid-column-start: 4;
+  grid-row-start: 6;
+}
+
+#k-button-multiply{
+  color: #FF3D00;
+  font-weight: bold;
+  grid-column-start: 4;
+  grid-row-start: 5;
+}
+
+#k-button-plus{
+  color: #FF3D00;
+  font-weight: bold;
+  grid-column-start: 4;
+  grid-row-start: 7;
+}
+
+#k-button-clear{
+  color: #FF3D00;
+  font-weight: bold;
+  grid-column-start: 1;
+  grid-row-start: 4;
+}
+
+#k-button-back{
+  color: #FF3D00;
+  font-weight: bold;
+  grid-column-start: 2;
+  grid-row-start: 4;
+}
+
+#k-button-percent{
+  color: #FF3D00;
+  font-weight: bold;
+  grid-column-start: 3;
+  grid-row-start: 4;
+}
+
+#k-button-divide{
+  color: #FF3D00;
+  font-weight: bold;
+  grid-column-start: 4;
+  grid-row-start: 4;
+}
