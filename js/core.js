@@ -1,14 +1,12 @@
 class Kalculator {
-    // total amount
     amount = 0;
-    // last number entered
     last = 0;
-    // input (qty on screen)
     input = "0";
-    // current operation
-    // add | sub | mul | div
     operation = "";
-    // prev operations
+    /**
+     * @TODO:
+     * Add history support
+     */
     history = [];
 
     ui;
@@ -37,10 +35,7 @@ class Kalculator {
     addToInput(digit) {
         this.input != "0" ? this.input += digit : this.input = digit;
         if (this.last == 0 && this.amount == 0) {
-            // write in screen
             this.ui.screen.textContent = this.input;
-        } else {
-            // write in current
             this.ui.current.textContent = `${this.operation} ${this.input}`;
         }
     }
@@ -59,7 +54,6 @@ class Kalculator {
                     self.last = parseFloat(self.input);
                 } else {
                     self.last = self.add(self.last, parseFloat(self.input));
-                    self.ui.screen.textContent = self.last;
                 }
                 break;
             case "-":
@@ -67,7 +61,6 @@ class Kalculator {
                     self.last = parseFloat(self.input);
                 } else {
                     self.last = self.sub(self.last, parseFloat(self.input));
-                    self.ui.screen.textContent = self.last;
                 }
                 break;
             case "*":
@@ -75,7 +68,6 @@ class Kalculator {
                     self.last = parseFloat(self.input);
                 } else {
                     self.last = self.mul(self.last, parseFloat(self.input));
-                    self.ui.screen.textContent = self.last;
                 }
                 break;
             case "/":
@@ -83,7 +75,6 @@ class Kalculator {
                     self.last = parseFloat(self.input);
                 } else {
                     self.last = self.div(self.last, parseFloat(self.input));
-                    self.ui.screen.textContent = self.last;
                 }
                 break;
             default:
@@ -99,11 +90,10 @@ class Kalculator {
                 self.input = "0";
                 return;
         }
+        self.ui.screen.textContent = self.last;
         self.ui.current.textContent = self.operation + " 0";
         self.input = "0";
     }
-
-    // operations
 
     add(n1, n2) {
         return parseFloat(n1) + parseFloat(n2);
