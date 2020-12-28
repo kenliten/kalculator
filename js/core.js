@@ -110,6 +110,14 @@ class Kalculator {
     div(n1, n2) {
         return parseFloat(n1) / parseFloat(n2);
     }
+
+    /**
+     * @FIXME
+     * this must return the n2 percent of n1
+     */
+    per(n1, n2) {
+        return (n1 * 100) / n2;
+    }
 }
 
 const app = new Kalculator();
