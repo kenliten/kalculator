@@ -40,7 +40,8 @@ class UI {
             add: link('#add-button'),
             sub: link('#sub-button'),
             mul: link('#mul-button'),
-            div: link('#div-button')
+            div: link('#div-button'),
+            equal: link('#equal-button')
         };
 
         self.screen.textContent = self.amount;
@@ -81,16 +82,19 @@ class UI {
             parent.clear();
         });
         self.buttons.operations.add.addEventListener('click', function () {
-            parent.operate('+');
+            parent.operate('add');
         });
         self.buttons.operations.sub.addEventListener('click', function () {
-            parent.operate('-');
+            parent.operate('sub');
         });
         self.buttons.operations.mul.addEventListener('click', function () {
-            parent.operate('*');
+            parent.operate('mul');
         });
         self.buttons.operations.div.addEventListener('click', function () {
-            parent.operate('/');
+            parent.operate('div');
+        });
+        self.buttons.operations.equal.addEventListener('click', function () {
+            parent.operate('equal');
         });
     }
 }
